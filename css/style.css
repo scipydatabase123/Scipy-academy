@@ -256,6 +256,8 @@ body {
 
 .dropdown {
   max-width: 500px;
+  z-index: 10;
+  position: relative;
 }
 .dropdown ul {
   opacity: 0;
@@ -263,23 +265,27 @@ body {
   display: grid;
   background: rgba(255, 255, 255, 0.5);
   grid-template-columns: 1fr 1fr;
-  position: absolute;
+  position: fixed;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  transform: translateY(-10px); /* Initially push it up */
-  transition: top 0.3s opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
-    visibility 0.3s;
-  animation: fadeInDown 0.4s linaer;
+  z-index: 10;
+  transform: translateY(-10px);
+  transition: 
+    top 0.3s ease-in-out, 
+    opacity 0.3s ease-in-out, 
+    transform 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  animation: fadeInDown 0.4s linear;
   width: auto;
-  /* height: 200px; */
+  height: max-content;
+
 }
 
 .dropdown:hover ul {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  display: grid;
 }
+
 
 .dropdown ul {
   padding: 14px 0;
