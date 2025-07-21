@@ -853,5 +853,78 @@
       // Auto-play every 5 seconds
       setInterval(nextSlide, 5000);
     </script>
+     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".form-grid");
+        const requiredInputs = form.querySelectorAll(
+          "input[required], select[required]"
+        );
+        const submitBtn = form.querySelector(".button");
+        const originalBtnText = submitBtn.innerHTML;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Set loading state
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Sending <span class="spinner"></span>';
+
+          let allFilled = true;
+          requiredInputs.forEach((input) => {
+            if (!input.value.trim()) {
+              allFilled = false;
+              input.style.border = "1px solid red";
+            } else {
+              input.style.border = "";
+            }
+          });
+
+          if (!allFilled) {
+            alert("Please fill in all required fields before submitting.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+            return;
+          }
+
+          const formData = new URLSearchParams({
+            Name: form.querySelector("#Name").value,
+            Qualification: form.querySelector("#Qualification").value,
+            SpecializedField: form.querySelector("#SpecializedField").value,
+            Country: form.querySelector("#Country").value, // dropdown select value
+            WhatsApp: form.querySelector("#WhatsApp").value,
+            PhoneNo: form.querySelector("#PhoneNo").value,
+            LinkedIn: form.querySelector("#LinkedIn").value,
+            Instagram: form.querySelector("#Instagram").value,
+          });
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbx7AA0r1xV060ODPEdLUTjynxsbxgpntYFGDSOB6uh4KgvykEY3Nf1wN_WFKHgTMhIzgQ/exec",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: formData,
+            }
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Data sent:", data);
+              form.reset();
+              alert("Form submitted successfully!");
+            })
+            .catch((error) => {
+              console.error("Submission error:", error);
+              alert(
+                "There was an error submitting your form. Please try again."
+              );
+            })
+            .finally(() => {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            });
+        });
+      });
+    </script>
   </body>
 </html>
