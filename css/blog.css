@@ -3,12 +3,12 @@
 
 a {
   text-decoration: none;
-  color: #0092ff;
+  color: #0032e7;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #0092ff; /* Darker shade for link hover */
+  color: #0032e7; /* Darker shade for link hover */
 }
 
 /* Blog Container */
@@ -39,11 +39,11 @@ a:hover {
 /* Section Titles */
 .section-title {
   font-size: 26px;
-  color: #0092ff;
+  color: #0032e7;
   font-weight: 600;
   margin: 40px 0 20px;
   text-transform: uppercase;
-  border-bottom: 2px solid #0092ff;
+  border-bottom: 2px solid #0032e7;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -250,7 +250,7 @@ p {
 .read {
   display: inline-block;
   margin-top: 15px;
-  color: #007bff;
+  color: #0032e7;
   font-weight: 600;
   text-decoration: none;
 }
