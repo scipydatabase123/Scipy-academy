@@ -698,7 +698,9 @@ color: #0032e7;
 @media (max-width: 992px) {
   .main-title {
     font-size: 2.2rem;
+
   }
+  
   
   .sub-description {
     font-size: 1.3rem;
@@ -716,6 +718,7 @@ color: #0032e7;
     position: static;
     margin-top: 0;
     margin-bottom: 30px;
+ 
   }
   
   .course-aside-tabsOuter {
