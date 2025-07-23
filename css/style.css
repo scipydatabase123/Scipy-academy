@@ -1621,7 +1621,8 @@ align-items: center;
   margin: auto;
 }
 .sub-contents-about-container-1{
-  padding: 50px 0px
+  padding: 50px 0px;
+  margin-bottom: 20px;
 }
 .heading-sub{
   width: 100%;
