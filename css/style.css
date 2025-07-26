@@ -1596,14 +1596,14 @@ align-items: center;
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
-  background-color: #1d4ed8;
+  background-color: #0032e7;
   color: white;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .nav-buttons button:hover {
-  background-color: #2563eb;
+  background-color: #0032e7;
 }
 .carousel-section{
   overflow: hidden;
