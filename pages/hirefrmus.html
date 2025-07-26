@@ -529,5 +529,61 @@
     <script src="owl.carousel.min.js"></script>
     <script src="odometer.js"></script>
     <script src="../js/about.js"></script>
+    <script>
+  const form = document.getElementById('hire_form');
+  const submitBtn = form.querySelector('.btn');
+  const originalBtnText = submitBtn.innerHTML;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending...';
+
+    const name = form.querySelector('#hire_name').value.trim();
+    const company = form.querySelector('#hire_company').value.trim();
+    const email = form.querySelector('#hire_email').value.trim();
+    const message = form.querySelector('#hire_message').value.trim();
+
+    if (!name || !company || !email || !message) {
+      alert('Please fill in all required fields before submitting.');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+      return;
+    }
+
+    const formData = new URLSearchParams();
+    formData.append('Name', name);
+    formData.append('Company', company);
+    formData.append('Email', email);
+    formData.append('Message', message);
+
+    fetch('https://script.google.com/macros/s/AKfycbybln4RdS_uaG_UOix_-ZZO9FV0C_wr7ONUUGEoQsysRGrPwHGMUEs9OKjzJ1temb4HSA/exec', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: formData.toString(),
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log('Response:', data);
+      if (data.result === 'success') {
+        alert('Your request has been submitted successfully!');
+        form.reset();
+      } else {
+        alert('Submission failed: ' + data.error);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error submitting the form.');
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    });
+  });
+</script>
   </body>
 </html>
