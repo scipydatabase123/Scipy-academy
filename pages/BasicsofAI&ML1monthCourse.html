@@ -65,7 +65,48 @@
     <title>SciPy Academy|IT training with placement kerala,Trivandrum</title>
     <meta name="keywords" content="short-term IT courses in trivandrum,AI internship in trivandrum,live project training for students trivandrum,">
     <link rel="canonical" href="https://scipyacademy.com/pages/basicsOfAIandML1M.html"/>
-        
+   
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "BasicsofAI&ML1monthCourse",
+  "description": "Master full stack development with hands-on training in HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and cloud deployment. Includes live projects and mentorship.",
+  "provider": {
+    "@type": "Organization",
+    "name": "SciPy Academy",
+    "url": "https://scipyacademy.com",
+    "logo": "https://scipyacademy.com/logo.png"
+  },
+  "url": "https://scipyacademy.com/full-stack-developer-course",
+  "courseCode": "FSD-101",
+  "educationalCredentialAwarded": "Certificate of Completion",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "name": "BasicsofAI&ML1monthCourse - August 2025 Batch",
+    "startDate": "2025-08-20",
+    "endDate": "2025-12-20",
+    "location": {
+      "@type": "Place",
+      "name": "SciPy Academy, Trivandrum",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pattom Trivandrum",
+        "addressLocality": "Trivandrum",
+        "addressRegion": "Kerala",
+        "postalCode": "695004",
+        "addressCountry": "IN"
+      }
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": "Rahul Bose C P",
+      "url": "https://scipyacademy.com/trainers/Rahulbosecp"
+    }
+  }
+}
+</script>
+    
   </head>
   <body>
     <div class="sidebar-closer"></div>
@@ -980,54 +1021,7 @@
       </ul>
     </div>
     <script src="../js/Sidebarcollapse.js"></script>
-    <!-- <script>
-        window.addEventListener("DOMContentLoaded", () => {
-          const tabs = document.querySelectorAll(".tab");
-          const cards = document.querySelectorAll(".course-card");
-      
-          function applyFilter(tab) {
-            tabs.forEach((t) => t.classList.remove("active"));
-            tab.classList.add("active");
-      
-            const filter = tab.getAttribute("data-filter");
-            let visibleIndex = 0;
-      
-            cards.forEach((card) => {
-              card.classList.remove("animate"); // reset
-      
-              const badge = card.querySelector(".badge");
-              const badgeText = badge?.textContent.trim().toLowerCase();
-              const badgeClass = badge?.classList;
-      
-              const isRecommended =
-                badgeClass?.contains("placed") || badgeText === "recommended";
-              const isNew = badgeClass?.contains("new") || badgeText === "new";
-      
-              const shouldShow =
-                filter === "all" ||
-                (filter === "recommended" && isRecommended) ||
-                (filter === "new" && isNew);
-      
-              if (shouldShow) {
-                card.style.display = "flex";
-                setTimeout(() => {
-                  card.classList.add("animate");
-                }, visibleIndex * 150);
-                visibleIndex++;
-              } else {
-                card.style.display = "none";
-              }
-            });
-          }
-      
-          tabs.forEach((tab) => {
-            tab.addEventListener("click", () => applyFilter(tab));
-          });
-      
-          // Trigger filter on initial load
-          applyFilter(tabs[0]);
-        });
-      </script> -->
+   
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -1130,79 +1124,7 @@ arrows.forEach((arrow) => {
 </script>
 
 
- <!-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get modal elements
-      const modal = document.getElementById('brochureModal');
-      const downloadBtn = document.querySelector('.download-brochure');
-      const closeModal = document.querySelector('.close-modal');
-      
-      // Show modal when download button is clicked
-      downloadBtn.addEventListener('click', function() {
-        modal.style.display = 'flex';
-      });
-      
-      // Hide modal when close button is clicked
-      closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-      });
-      
-      // Hide modal when clicking outside the modal content
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-      
-      // Handle form submission
-      const brochureForm = document.querySelector('.brochure-form');
-      brochureForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Here you would typically send the form data to your server
-        alert('Thank you! Your brochure download will start shortly.');
-        modal.style.display = 'none';
-        // Reset form
-        brochureForm.reset();
-      });
-    });
-  </script>  -->
-  <!-- script to download pdf -->
-  <!-- <script>
-    document.querySelector('.brochure-form').addEventListener('submit', function (e) {
-      e.preventDefault(); // prevent page reload
-  
-      // (Optional) You can capture the input values if needed
-      const name = document.getElementById('brochure-name').value.trim();
-      const phone = document.getElementById('brochure-phone').value.trim();
-  
-      // Basic validation (optional)
-      if (!name || !phone) {
-        alert('Please fill in all required fields.');
-        return;
-      }
-  
-      // Trigger PDF download
-      const link = document.createElement('a');
-      link.href = '/AcademicsScipy/scipywebsite/assets/brochure/Functions.pdf'; // Replace with your actual PDF path
-      link.download = 'brochure.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-  
-      // Optionally close the modal
-      document.getElementById('brochureModal').style.display = 'none';
-  
-      // Reset the form
-      this.reset();
-    });
-  
-    // Close modal button
-    document.querySelector('.close-modal').addEventListener('click', function () {
-      document.getElementById('brochureModal').style.display = 'none';
-    });
-  </script>  -->
-  
-<!-- popers -->
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.enquiry-form');
@@ -1448,26 +1370,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Auto-play every 5 seconds
       setInterval(nextSlide, 5000);
     </script>
-
-
-
-
-
-
-
     <script src="../js/about.js"></script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "Scipy Academy",
-  "url": "https://scipyacademy.com/index.html",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://scipyacademy.com/index.html https://scipyacademy.com/pages/courses.html https://scipyacademy.com/pages/careers.html https://scipyacademy.com/pages/blog.html https://scipyacademy.com/pages/contact.html https://scipyacademy.com/pages/mentorscommunity.html https://scipyacademy.com/pages/placement.html https://scipyacademy.com/pages/Portfolio.html https://scipyacademy.com/pages/Testimonial.html https://scipyacademy.com/pages/affiliated.html https://scipyacademy.com/pages/Tutorial.html https://scipyacademy.com/pages/project.html https://scipyacademy.com/pages/eventsPage.html https://scipyacademy.com/pages/socialMedia.html https://scipyacademy.com/pages/hirefrmus.html https://scipyacademy.com/pages/aiAndDataScienceDC.html https://scipyacademy.com/pages/fullStackWebDC.html https://scipyacademy.com/pages/cyberSecurityAIpc.html https://scipyacademy.com/pages/digitalMarketingDC.html https://scipyacademy.com/pages/dataAnalyticsPC.html https://scipyacademy.com/pages/diplomaCourses.html https://scipyacademy.com/pages/professionalCourse.html https://scipyacademy.com/pages/hybridCourses.html https://scipyacademy.com/pages/shortTermCourses.html https://scipyacademy.com/pages/oneMonthCourses.html https://scipyacademy.com/pages/aboutus.html https://scipyacademy.com/pages/fullStackAIpc.html https://scipyacademy.com/pages/digitalMarketingWithAIpc.html https://scipyacademy.com/pages/iotAndRoboticsPC.html https://scipyacademy.com/pages/privacyPolicy.html https://scipyacademy.com/pages/blog-I.html https://scipyacademy.com/ https://scipyacademy.com/pages/blog-II.html https://scipyacademy.com/pages/blog-III.html https://scipyacademy.com/pages/blog-IV.html https://scipyacademy.com/pages/blog-V.html https://scipyacademy.com/pages/blog-VI.html https://scipyacademy.com/pages/eventOne.html https://scipyacademy.com/pages/eventTwo.html https://scipyacademy.com/pages/eventsThree.html https://scipyacademy.com/pages/DIPLOMA%20IN%20GRAPHIC%20DESIGNING%20WITH%20VIDEO%20EDITING%20AND%20CONTENT%20CREATION.html https://scipyacademy.com/pages/dataSciencePC.html https://scipyacademy.com/pages/fullStackPythonPC.html https://scipyacademy.com/pages/fullStackMernpc.html https://scipyacademy.com/pages/softwareTestingPC.html https://scipyacademy.com/pages/hrManagementPC.html https://scipyacademy.com/pages/dataScienceWithAnalyticsHC.html https://scipyacademy.com/pages/machineLearingAndNLPpc.html https://scipyacademy.com/pages/deepLearningWithGENAIpc.html https://scipyacademy.com/pages/digitalMarketingWithWebDevelopmentPC.html https://scipyacademy.com/pages/pythonFullStackWithMachineLearning.html https://scipyacademy.com/pages/excelWithPowerBiSTC.html https://scipyacademy.com/pages/dataAnalysisWithPythonSTC.html https://scipyacademy.com/pages/digitalMarketingSTC.html https://scipyacademy.com/pages/mbaHrOperationFinanceSTC.html https://scipyacademy.com/pages/BusinessAnalyticsSTC.html https://scipyacademy.com/pages/smmExpert1M.html https://scipyacademy.com/pages/powerBI1M.html https://scipyacademy.com/pages/seoExpert1M.html https://scipyacademy.com/pages/htmlCss1M.html https://scipyacademy.com/pages/interviewPreparationAndTraining1M.html https://scipyacademy.com/pages/communication1M.html https://scipyacademy.com/pages/python1M.html https://scipyacademy.com/pages/basicsOfAIandML1M.html{search_term_string}Best software training institute in Trivandrum, kerala, Best Ai course in Trivandrum , best it training, Best internships in trivandrum kerala, Best webdevelopment course in trivandrum , Top digital marketing course in trivandrum kerala, best cyber security in trivandrum kerala.",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+
   </body>
 </html>
